@@ -1,31 +1,27 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist",
-        "module": "esnext",
-        "target": "es6",
-        "lib": ["es6", "dom"],
-        "sourceMap": true,
-        "allowJs": true,
-        "jsx": "react",
-        "moduleResolution": "node",
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "baseUrl": "./",
-        "rootDir": "./",
-        "typeRoots": ["./node_modules/@types", "./src/@types"],
-        "paths": {
-            "@src/*": ["src/*"],
-            "@images/*": ["src/images/*"],
-            "@styles/*": ["src/styles/*"],
-            "@components/*": ["src/components/*"]
-        },
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "importsNotUsedAsValues": "preserve",
-        "incremental": true
-    },
-    "include": ["src"],
-    "exclude": ["**/node_modules", "**/.*/"]
+  "compilerOptions": {
+    "outDir": "./build",
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["dom", "esnext", "DOM.Iterable"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "importsNotUsedAsValues": "preserve",
+    "incremental": true,
+    "declaration": true, // Generate corresponding .d.ts file
+    "noUnusedLocals": true, // Report errors on unused locals
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build"]
 }
