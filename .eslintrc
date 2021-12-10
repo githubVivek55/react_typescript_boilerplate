@@ -22,8 +22,7 @@
         }
     },
     // Fine tune rules
-    "rules": {
-        "@typescript-eslint/no-var-requires": 0,
+    "rules": {        
         "prettier/prettier": [
             "off",
             {
