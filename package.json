@@ -6,12 +6,9 @@
   "scripts": {
     "build": "npm run clean-dist && webpack --config=configs/webpack/prod.js",
     "clean-dist": "rimraf dist/*",
-    "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
     "start": "npm run start-dev",
     "start-dev": "webpack serve --config=configs/webpack/dev.js",
-    "start-prod": "npm run build && node express.js",
-    "test": "jest --coverage --watchAll --config=configs/jest.json",
-    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
+    "test": "jest --coverage --watchAll --config=configs/jest.json"
   },
   "repository": {
     "type": "git",
@@ -35,6 +32,7 @@
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.10",
     "@types/react": "^17.0.37",
@@ -55,6 +53,7 @@
     "node-sass": "^6.0.1",
     "prettier": "^2.5.0",
     "react-hot-loader": "^4.13.0",
+    "react-refresh": "^0.11.0",
     "rimraf": "^3.0.2",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",

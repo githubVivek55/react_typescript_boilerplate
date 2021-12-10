@@ -2,6 +2,12 @@ const { resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  entry: "./index.tsx",
+  output: {
+    filename: "js/bundle.[contenthash].min.js",
+    path: resolve(__dirname, "../../build"),
+    publicPath: "/",
+  },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
